@@ -152,7 +152,7 @@ function createMap(earthquakes) {
         from = magnitude[i];
         to = magnitude[i+1];
         labels.push(
-          '<i style="background:' + magColor(from + 1) + '">[color]</i> ' +
+          '<i style="background:' + magColor(from + 1) + '">""</i> ' +
           from + (to ? '&ndash;' + to : '+'));
           // '<i style="background:' + magColor(magnitude[i] + 1) + '"></i> ' + 
           // magnitude[i] + (magnitude[i + 1] ? ' - ' + magnitude[i + 1] + '<br>' : ' + '));
