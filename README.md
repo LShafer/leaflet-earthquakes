@@ -42,7 +42,7 @@ The USGS wants to see a second data set on the map to illustrate the relationshi
 
 * Add a number of base maps to choose from as well as create two overlays (one for earthquakes and one for fault lines) that can be turned on and off independently.
 
-* Add layer controls to our map.
+* Add layer controls to the map.
 
 - - -
 
