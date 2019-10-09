@@ -30,7 +30,7 @@ The USGS is interested in building a new set of tools that will allow them visua
 
    * Create a legend that will provide context for the map data.
 
-<img src = "https://github.com/LShafer/leaflet-earthquakes/blob/master/Leaflet-earthquakes.png">
+<img src = "https://github.com/LShafer/leaflet-earthquakes/blob/master/earthquakemap.png">
 
 - - -
 
