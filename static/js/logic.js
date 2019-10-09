@@ -8,7 +8,7 @@ d3.json(queryUrl, function(data) {
   console.log(data);
 });
 
-// Function for the features on the map
+// Create the features of the maps
 function createFeatures(earthquakeData) {
 
   // Define a function we want to run once for each feature in the features array
@@ -58,7 +58,7 @@ function createFeatures(earthquakeData) {
   createMap(earthquakes);
 }
 
-// Define function to create the maps
+// Create the maps
 function createMap(earthquakes) {
 
   // Define streetmap and darkmap layers
@@ -83,7 +83,7 @@ function createMap(earthquakes) {
     accessToken: API_KEY
   });
 
-  // Create new layer for fault lines
+  // Create a new layer for the fault lines
   let faultLine = new L.LayerGroup();
 
   // Define a baseMaps object to hold our base layers
@@ -108,17 +108,14 @@ function createMap(earthquakes) {
     layers: [darkmap, earthquakes, faultLine]
   });
 
-  // Create a layer control
-  // Pass in our baseMaps and overlayMaps
-  // Add the layer control to the map
+  // Create a layer control for baseMaps and overlayMaps
   L.control.layers(baseMaps, overlayMaps, {
     collapsed: false
   }).addTo(myMap);
 
-  // Query URL for fault lines
   let faultlinequery = "https://raw.githubusercontent.com/fraxen/tectonicplates/master/GeoJSON/PB2002_plates.json";
   
-  // Create the fault lines and add them to the faultline layer
+  // Create the faultlines and add them to the faultline layer
   d3.json(faultlinequery, function(data) {
     L.geoJSON(data, {
       style: function() {
@@ -127,7 +124,7 @@ function createMap(earthquakes) {
     }).addTo(faultLine)
   })
 
-  // List of colors for legend
+  // Create the colors for the legend
   function magColor(d) {
     return d > 5 ? '#FF0000' :
            d > 4 ? '#FF8C00' :
@@ -144,24 +141,19 @@ function createMap(earthquakes) {
 
   legend.onAdd = function(map) {
     let div = L.DomUtil.create('div', 'info legend'),
-          magnitude = [0, 1, 2, 3, 4, 5],
-          labels = [],
-          from, to;
+          labels = ['<strong><center>Magnitude</center></strong>'],
+          magnitude = [0, 1, 2, 3, 4, 5];
 
       for (let i = 0; i < magnitude.length; i++) {
-        from = magnitude[i];
-        to = magnitude[i+1];
+        div.innerHTML +=
         labels.push(
-          '<i style="background:' + magColor(from + 1) + '">""</i> ' +
-          from + (to ? '&ndash;' + to : '+'));
-          // '<i style="background:' + magColor(magnitude[i] + 1) + '"></i> ' + 
-          // magnitude[i] + (magnitude[i + 1] ? ' - ' + magnitude[i + 1] + '<br>' : ' + '));
+          '<i style="background:' + magColor(magnitude[i] + 1) + '"> </i> ' + 
+          magnitude[i] + (magnitude[i + 1] ? ' - ' + magnitude[i + 1] + '<br>' : ' + '));
       }
   
-      div.innerHTML = labels.join('<br>');
+      div.innerHTML = labels.join('');
       return div;
   };
   
   legend.addTo(myMap);
 }
-  
