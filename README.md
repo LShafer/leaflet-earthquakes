@@ -8,11 +8,11 @@ The USGS is interested in building a new set of tools that will allow them visua
 
 ## Your Task
 
-### Basic Visualization
+### Earthquake Map
 
 ![2-BasicMap](Images/2-BasicMap.png)
 
-1. **Get your data set**
+1. **Data Collection**
 
    ![3-Data](Images/3-Data.png)
 
@@ -20,7 +20,7 @@ The USGS is interested in building a new set of tools that will allow them visua
 
    ![4-JSON](Images/4-JSON.png)
 
-2. **Import & Visualize the Data**
+2. **Build the Map**
 
    Create a map using Leaflet that plots all of the earthquakes from the data set based on their longitude and latitude.
 
@@ -32,15 +32,15 @@ The USGS is interested in building a new set of tools that will allow them visua
 
 - - -
 
-### Level 2: More Data (Optional)
+### Tectonic Plate Map
 
 ![5-Advanced](Images/5-Advanced.png)
 
-The USGS wants to see a second data set on the map to illustrate the relationship between tectonic plates and seismic activity. To accomplish this, pull in a second data set and visualize it along side the original set of data. Data on tectonic plates can be found at <https://github.com/fraxen/tectonicplates>.
+The USGS wants to see a second data set on the map to illustrate the relationship between tectonic plates and seismic activity. Data on tectonic plates can be found here: <https://github.com/fraxen/tectonicplates>.
 
-* Plot a second data set on our map.
+* Plot a second data set on the map.
 
-* Add a number of base maps to choose from as well as separate out two different data sets into overlays that can be turned on and off independently.
+* Add a number of base maps to choose from as well as create two overlays (one for earthquakes and one for fault lines) that can be turned on and off independently.
 
 * Add layer controls to our map.
 
