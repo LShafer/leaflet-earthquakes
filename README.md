@@ -12,11 +12,9 @@ The USGS is interested in building a new set of tools that will allow them visua
 
 1. **Data Collection**
 
-   ![3-Data](Images/3-Data.png)
-
    Earthquake data for this map is provided by the USGS GeoJSON feed, located here: [USGS GeoJSON Feed](http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php)
-
-   ![4-JSON](Images/4-JSON.png)
+   
+   Data on tectonic plates can be found here: <https://github.com/fraxen/tectonicplates>
 
 2. **Build the Map**
 
@@ -25,22 +23,14 @@ The USGS is interested in building a new set of tools that will allow them visua
    * Data markers should reflect the magnitude of the earthquake in their size and color. Earthquakes with higher magnitudes should appear larger and darker in color.
 
    * Include popups that provide additional information about the earthquake when a marker is clicked.
+   
+   * Add a number of base maps to choose from as well as create two overlays (one for earthquakes and one for fault lines) that can be turned on and off independently.
+
+   * Add layer controls to the map.
 
    * Create a legend that will provide context for the map data.
 
-- - -
-
-### Tectonic Plate Map
-
 <img src = "https://github.com/LShafer/leaflet-earthquakes/blob/master/Leaflet-earthquakes.png">
-
-The USGS wants to see a second data set on the map to illustrate the relationship between tectonic plates and seismic activity. Data on tectonic plates can be found here: <https://github.com/fraxen/tectonicplates>.
-
-* Plot a second data set on the map.
-
-* Add a number of base maps to choose from as well as create two overlays (one for earthquakes and one for fault lines) that can be turned on and off independently.
-
-* Add layer controls to the map.
 
 - - -
 
