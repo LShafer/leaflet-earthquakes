@@ -10,8 +10,6 @@ The USGS is interested in building a new set of tools that will allow them visua
 
 ### Earthquake Map
 
-![2-BasicMap](Images/2-BasicMap.png)
-
 1. **Data Collection**
 
    ![3-Data](Images/3-Data.png)
@@ -34,7 +32,7 @@ The USGS is interested in building a new set of tools that will allow them visua
 
 ### Tectonic Plate Map
 
-![5-Advanced](Images/5-Advanced.png)
+<img src = "https://github.com/LShafer/leaflet-earthquakes/blob/master/Leaflet-earthquakes.png">
 
 The USGS wants to see a second data set on the map to illustrate the relationship between tectonic plates and seismic activity. Data on tectonic plates can be found here: <https://github.com/fraxen/tectonicplates>.
 
